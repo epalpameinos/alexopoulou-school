@@ -1,7 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Colors */
 :root {
     --color-blue: #0B2447;
     --color-navy: #364F6B;
@@ -35,7 +34,7 @@ a {
 # Sections & Section Header
 --------------------------------------------------------------*/
 section {
-    padding: 60px 0;
+    padding: 3.75rem 0;
     overflow: hidden;
 }
 
@@ -45,14 +44,14 @@ section {
 
 .section-header {
     text-align: center;
-    padding-bottom: 60px;
+    padding-bottom: 3.75rem;
 }
 
 .section-header h2 {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
     position: relative;
 }
 
@@ -60,8 +59,8 @@ section {
     content: "";
     position: absolute;
     display: block;
-    width: 50px;
-    height: 3px;
+    width: 3.125rem;
+    height: 0.1875rem;
     background: var(--color-teal);
     left: 0;
     right: 0;
@@ -81,31 +80,31 @@ section {
     position: fixed;
     visibility: hidden;
     opacity: 0;
-    right: 15px;
-    bottom: -15px;
+    right: 1rem;
+    bottom: -1rem;
     z-index: 99999;
-    background: var(--color-teal);
-    width: 55px;
-    height: 55px;
-    border-radius: 50px;
+    background: var(--color-pink);
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 3.125rem;
     transition: all 0.4s;
 }
 
 .scroll-top i {
-    font-size: 28px;
+    font-size: 1.75rem;
     color: var(--color-white);
     line-height: 0;
 }
 
 .scroll-top:hover {
-    background: var(--color-pink);
+    background: var(--color-navy);
     color: var(--color-white);
 }
 
 .scroll-top.active {
     visibility: visible;
     opacity: 1;
-    bottom: 25px;
+    bottom: 1.625rem;
 }
 
 /*--------------------------------------------------------------
@@ -117,8 +116,8 @@ section {
 --------------------------------------------------------------*/
 .topbar {
     background: var(--color-teal);
-    height: 40px;
-    font-size: 14px;
+    height: 2.5rem;
+    font-size: 0.875rem;
     transition: all 0.5s;
     color: var(--color-blue);
     padding: 0;
@@ -133,7 +132,7 @@ section {
 
 .topbar .contact-info i a {
     font-weight: 600;
-    padding-left: 5px;
+    padding-left: 0.3125rem;
     color: var(--color-blue);
     line-height: 0;
     transition: 0.3s;
@@ -147,7 +146,7 @@ section {
     color: var(--color-blue);
     line-height: 0;
     transition: 0.3s;
-    margin-left: 20px;
+    margin-left: 1.25rem;
 }
 
 .topbar .social-links a:hover {
@@ -155,13 +154,13 @@ section {
 }
 
 .topbar .social-links i {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .header {
     transition: all 0.5s;
     z-index: 997;
-    height: 90px;
+    height: 5.625rem;
     background-color: var(--color-navy);
 }
 
@@ -175,18 +174,39 @@ section {
 }
 
 .header .logo h1 {
-    font-size: 32px;
+    font-size: 2rem;
     margin: 0;
     font-weight: 600;
     letter-spacing: 1.2px;
 }
 
 .sticked-header-offset {
-    margin-top: 70px;
+    margin-top: 4.375rem;
 }
 
 section {
-    scroll-margin-top: 70px;
+    scroll-margin-top: 4.375rem;
+}
+
+/*--------------------------------------------------------------
+# Mobile Navigation, very small screens
+--------------------------------------------------------------*/
+@media (max-width: 400px) {
+    .topbar {
+        font-size: 12px;
+    }
+    .header .logo h1 {
+        font-size: 24px;
+    }  
+}
+
+/*--------------------------------------------------------------
+# Tablet
+--------------------------------------------------------------*/
+@media (min-width: 401px) and (max-width: 767px) {
+    .header .logo h1 {
+        font-size: 26px;
+    }    
 }
 
 /*--------------------------------------------------------------
@@ -221,7 +241,7 @@ section {
         align-items: center;
         justify-content: space-between;
         padding: 0 3px;
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 600;
         color: var(--color-white);
         white-space: nowrap;
@@ -266,6 +286,10 @@ section {
 # Mobile Navigation
 --------------------------------------------------------------*/
 @media (max-width: 1279px) {
+
+    .topbar .contact-info i a {
+        padding-left: 2px;
+    }
 
     .navbar {
         position: fixed;
@@ -367,21 +391,24 @@ section {
 
 .hero h2 {
     font-size: 48px;
+    letter-spacing: 12px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: var(--color-pink);
 }
 
 .hero p {
     color: var(--color-white);
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 30px;
+    font-size: 30px;
+    letter-spacing: 4px;
 }
 
 .hero .btn-get-started {
-    font-weight: 500;
-    font-size: 15px;
-    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 2px;
     display: inline-block;
     padding: 14px 40px;
     border-radius: 50px;
@@ -393,7 +420,7 @@ section {
 }
 
 .hero .btn-get-started:hover {
-    border-color: lightgreen;
+    border-color: var(--color-teal);
 }
 
 @media (max-width: 640px) {
@@ -466,6 +493,27 @@ section {
 .hero .icon-box:hover .title a,
 .hero .icon-box:hover .icon {
     color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Mobile Navigation, very small screens
+--------------------------------------------------------------*/
+@media (max-width: 400px) {
+    .hero h2 {
+        font-size: 34px;
+        letter-spacing: 8px;
+        font-weight: 600;
+    }
+}
+
+/*--------------------------------------------------------------
+# Tablet
+--------------------------------------------------------------*/
+@media (min-width: 401px) and (max-width: 991px) {
+    .hero-image-container {
+        display: flex;
+        justify-content: center;
+    }    
 }
 
 /*--------------------------------------------------------------
