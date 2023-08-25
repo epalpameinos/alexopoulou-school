@@ -48,19 +48,20 @@ section {
 }
 
 .section-header h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 1.25rem;
     padding-bottom: 1.25rem;
     position: relative;
+    color: var(--color-teal);
 }
 
 .section-header h2:after {
     content: "";
     position: absolute;
     display: block;
-    width: 3.125rem;
-    height: 0.1875rem;
+    width: 8rem;
+    height: 0.25rem;
     background: var(--color-teal);
     left: 0;
     right: 0;
@@ -71,6 +72,7 @@ section {
 .section-header p {
     margin-bottom: 0;
     color: var(--color-grey);
+    font-size: 18px;
 }
 
 /*--------------------------------------------------------------
@@ -523,6 +525,7 @@ section {
     font-weight: 700;
     font-size: 28px;
     margin-bottom: 20px;
+    color: var(--color-navy);
 }
 
 .about .content ul {
@@ -541,7 +544,7 @@ section {
     font-size: 20px;
     left: 0;
     top: -3px;
-    color: var(--color-pink);
+    color: var(--color-teal);
 }
 
 .about .content p:last-child {
@@ -550,6 +553,15 @@ section {
 
 .about .row p {
     color: var(--color-grey);
+}
+
+/*--------------------------------------------------------------
+# Mobile Navigation
+--------------------------------------------------------------*/
+@media (max-width: 500px) {
+    .section-header h2 {
+        font-size: 26px;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -826,7 +838,7 @@ section {
 .footer {
     background: var(--color-white);
     background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    font-size: 14px;
+    font-size: 13px;
     color: var(--color-navy);
     padding: 16px 0;
     text-align: center;
@@ -835,4 +847,13 @@ section {
 .footer .credits a {
     color: var(--color-teal);
     font-weight: 500;
+}
+
+/*--------------------------------------------------------------
+# Mobile Navigation
+--------------------------------------------------------------*/
+@media (max-width: 400px) {
+    .footer {
+        font-size: 12px;
+    }
 }
