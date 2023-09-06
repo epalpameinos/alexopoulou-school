@@ -78,6 +78,58 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
+    * Preloader
+    */
+    const preloader = document.querySelector('#preloader');
+    if (preloader) {
+        window.addEventListener('load', () => {
+            preloader.remove();
+        });
+    }
+
+    /**
+    * Sticky TopBar on Scroll
+    */
+    /* const topBar = document.querySelector('#topbar');
+    if (topBar) {
+        let topBarOffset = topBar.offsetTop;
+        let nextElement = topBar.nextElementSibling;
+
+        const topBarFixed = () => {
+            if ((topBarOffset - window.scrollY) <= 0) {
+                topBar.classList.add('sticked');
+                if (nextElement) nextElement.classList.add('sticked-header-offset');
+            } else {
+                topBar.classList.remove('sticked');
+                if (nextElement) nextElement.classList.remove('sticked-header-offset');
+            }
+        }
+        window.addEventListener('load', topBarFixed);
+        document.addEventListener('scroll', topBarFixed);
+    } */
+
+    /**
+    * Sticky Header on Scroll
+    */
+    const selectHeader = document.querySelector('#header');
+    if (selectHeader) {
+        let headerOffset = selectHeader.offsetTop;
+        let nextElement = selectHeader.nextElementSibling;
+
+        const headerFixed = () => {
+            if ((headerOffset - window.scrollY) <= 0) {
+                selectHeader.classList.add('sticked');
+                if (nextElement) nextElement.classList.add('sticked-header-offset');
+            } else {
+                selectHeader.classList.remove('sticked');
+                if (nextElement) nextElement.classList.remove('sticked-header-offset');
+            }
+        }
+        window.addEventListener('load', headerFixed);
+        document.addEventListener('scroll', headerFixed);
+    }
+
+    /**
     * Animation on scroll function and init
     */
     function aos_init() {

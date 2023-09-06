@@ -112,6 +112,37 @@ section {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
+#preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    overflow: hidden;
+    background: #fff;
+    transition: all 0.6s ease-out;
+}
+
+#preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid #fff;
+    border-color: var(--color-teal) transparent var(--color-pink) transparent;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 1.5s linear infinite;
+}
+
+@keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+  }
+}
 
 /*--------------------------------------------------------------
 # Header
@@ -166,15 +197,6 @@ section {
     background-color: var(--color-navy);
 }
 
-.header.sticked {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 70px;
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
-}
-
 .header .logo h1 {
     font-size: 2rem;
     margin: 0;
@@ -182,12 +204,29 @@ section {
     letter-spacing: 1.2px;
 }
 
+/* .topbar.sticked {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    z-index: 999;
+} */
+
+.header.sticked {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 70px;
+}
+
 .sticked-header-offset {
-    margin-top: 4.375rem;
+    margin-top: 40px;
 }
 
 section {
-    scroll-margin-top: 4.375rem;
+    scroll-margin-top: 130px;
 }
 
 /*--------------------------------------------------------------
@@ -666,6 +705,49 @@ section {
 .extra-services .service-item:hover {
     background: var(--color-pink);
     cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+# Leaflet Section
+--------------------------------------------------------------*/
+.leaflet {
+    background: var(--color-pink);
+    opacity: 0.7;
+    padding: 80px 0;
+}
+
+.leaflet h2 {
+    font-size: 34px;
+    letter-spacing: 6px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: var(--color-lightgrey);
+}
+
+.btn-leaflet {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: 50px;
+    transition: 0.3s;
+    color: var(--color-lightgrey);
+    background: yellowgreen;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    border: 2px solid var(--color-white);
+}
+
+.btn-leaflet:hover {
+    border-color: yellowgreen;
+}
+
+@media (max-width: 640px) {
+
+    .leaflet h2 {
+        font-size: 24px;
+    }
+
 }
 
 /*--------------------------------------------------------------

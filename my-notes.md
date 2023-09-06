@@ -1,18 +1,14 @@
 
-### add fyladio to website & add website to facebook
-### instagram account
-### check google maps
-### gamification section...soon with you!!
-### test website to all screen sizes with real screens
+-> Wednesday: 06/09/2023
+   ---------------------
+
+### add fyladio to website 
+
+### extensive app testing
+### test website at real tablet 
 
 ### gamification & quotes api sections to be added
+### fullstack app....
 ### add links to contact section, mail phone etc like the header ones!
 
-### site text adjust! & colors! & animations
-### site navigation, check!
-### icons check..
-### github & vercel
-### english language support! & dark mode feature to add!
-
-### spinner at page load, preloader functionality missing
-### header stick at top of the page
+### english language support & dark mode feature to add
